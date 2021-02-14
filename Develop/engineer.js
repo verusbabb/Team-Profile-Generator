@@ -8,3 +8,5 @@ class Engineer extends Manager {
     }
 
 }
+
+module.exports = Engineer;

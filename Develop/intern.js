@@ -8,3 +8,5 @@ class Intern extends Manger {
     }
 
 }
+
+module.exports = Intern;

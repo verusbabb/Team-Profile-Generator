@@ -9,4 +9,4 @@ class Manager {
     }
 }
 
-module.export = Manager;
+module.exports = Manager;

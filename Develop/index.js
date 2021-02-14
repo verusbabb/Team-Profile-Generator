@@ -39,10 +39,9 @@ inquirer
     ])
 
     .then((data) => {
-        var manager1 = new Manager(`${data.name}, ${data.employer_id}, ${data.email}, ${data.phone}`)
-        // console.log(typeof data);
-        // console.log(data);
-        // console.log(`${data.name}, ${data.employer_id}, ${data.email}, ${data.phone}`)
+
+        var manager1 = new Manager(data.name, data.employer_id, data.email, data.phone)
+
         console.log(manager1);
     })
 
