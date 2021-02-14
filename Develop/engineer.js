@@ -1,6 +1,6 @@
 const Manager = require('./manager');
 
-class Engineer extends Manger {
+class Engineer extends Manager {
     constructor(name, id, email, phone, gitHub) {
 
         super(name, id, email, phone);
