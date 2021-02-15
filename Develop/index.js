@@ -7,13 +7,19 @@ const Manager = require('./manager');
 // const intern = require('./intern');
 
 const questions = [
-    'What is your name?',
-    'What is your employer ID #?',
-    'What is your email?',
-    'What is your phone number?',
-    'What would you like to do?',
-    'What is your GitHub username?',
-    'What school are you attending?'
+    '0. What is your name?',
+    '1. What is your employer ID #?',
+    '2. What is your email?',
+    '3. What is your phone number?',
+    '4. What would you like to do?',
+    '5. What is your engineers name?',
+    '6. What is your engineers employee id?',
+    '7. What is your engineers email?',
+    '8. What is your engineers username?',
+    '9. What is your interns name?',
+    '10. What is your interns employee id?',
+    '11. what is your interns email?',
+    '12. What school is your intern attending?'
 ]
 
 inquirer
@@ -76,7 +82,7 @@ inquirer
                         {
                             name: 'username',
                             type: 'input',
-                            message: questions[5],
+                            message: questions[8],
                         }
                     ])
                         .then((data) => {
