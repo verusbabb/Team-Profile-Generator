@@ -1,15 +1,11 @@
 const Manager = require('./manager');
-const inquirer = require('inquirer');
 
 class Engineer extends Manager {
-    constructor(name, id, email, phone, gitHub) {
+    constructor(name, id, email, username) {
 
-        super(name, id, email, phone);
-        this.gitHub = gitHub;
+        super(name, id, email);
+        this.username = username;
     }
-
-
-
 }
 
 module.exports = Engineer;
