@@ -2,9 +2,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 // const generateHTML = require('./generateHTML');
-const Manager = require('./manager');
-// const engineer = require('./engineer');
-// const intern = require('./intern');
+const Employee = require('../lib/employee');
+const Manager = require('../lib/manager');
+const Engineer = require('../lib/engineer');
+const Intern = require('../lib/intern');
+// const Inputs = require('../src/inputs');
 
 const questions = [
     '0. What is your name?',
@@ -67,17 +69,17 @@ inquirer
                         {
                             name: 'name',
                             type: 'input',
-                            message: questions[0],
+                            message: questions[5],
                         },
                         {
                             name: 'employer_id',
                             type: 'input',
-                            message: questions[1],
+                            message: questions[6],
                         },
                         {
                             name: 'email',
                             type: 'input',
-                            message: questions[2],
+                            message: questions[7],
                         },
                         {
                             name: 'username',
@@ -86,9 +88,8 @@ inquirer
                         }
                     ])
                         .then((data) => {
-                            console.log(data);
-                            // var engineer1 = new Engineer(data.name, data.employer_id, data.email, data.username)
-                            // console.log(engineer1)
+                            var engineer1 = new Engineer(data.name, data.employer_id, data.email, data.username)
+                            console.log(engineer1)
                         })
                 }
                 else if (data.task[0] === "Add an Intern") {

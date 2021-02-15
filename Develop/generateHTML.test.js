@@ -1,1 +1,0 @@
-const generateHTML = require('./generateHTML');
