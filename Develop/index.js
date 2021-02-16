@@ -48,7 +48,7 @@ function addManager() {
                 addEngineer();
             }
 
-            else (data.addmore.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team"); //will replace this log with generateHTML() after generateHTML() is written.
+            else (data.addMore.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team"); //will replace this log with generateHTML() after generateHTML() is written.
         })
 }
 
@@ -115,7 +115,7 @@ function addIntern() {
         ])
 
         .then((data) => {
-            var intern = new Intern(data.name, data.id, data.email, data.gitHub)
+            var intern = new Intern(data.name, data.id, data.email, data.school)
             console.log("OK, this is your new intern...");
             console.log(intern);
         })
