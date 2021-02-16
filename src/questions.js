@@ -1,15 +1,29 @@
 const Manager = require("../lib/manager");
 
-const questions = [
-    "0. What is the employee's name?",
-    "1. What is the employee's role?",
-    "2. What is the employee's ID?",
-    "3. What is the employee's email address?",
-    "4. What is employee's phone number?",
-    "5. What is the engineer's GitHub username?",
-    "6. What school does the intern attend?"
+const managerQs = [
+    "0. What is your name?",
+    "1. What is your employee ID?",
+    "2. What is your email address?",
+    "3. What is your phone number?",
+    "4. Would you like to add another employee to your team?"
 ];
 
-const positions = ["Are they a manager?", "Are they an engineer?", "Are they an intern"]
+const engineerQs = [
+    "0. What is the new engineer's name?",
+    "1. What is the new engineer's ID?",
+    "2. What is the new engineer's email address?",
+    "3. What is the new engineer's GitHub username?"
+]
 
-module.exports = { questions, positions }
+const internQs = [
+    "0. What is the new intern's name?",
+    "1. What is the new intern's ID?",
+    "2. What is the new intern's email address?",
+    "3. What school is the new intern from?"
+]
+
+
+
+const whatNext = ["Yes, add an engineer", "Yes, add an intern", "No, done building my team"];
+
+module.exports = { managerQs, engineerQs, internQs, whatNext }

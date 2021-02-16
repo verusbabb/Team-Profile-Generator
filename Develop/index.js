@@ -8,98 +8,115 @@ const Engineer = require('../lib/engineer');
 const Intern = require('../lib/intern');
 const questions = require('../src/questions.js');
 
+addManager();
 
-inquirer
-    .prompt([
+function addManager() {
+    inquirer.prompt([
         {
             name: 'name',
             type: 'input',
-            message: questions.questions[0],
+            message: questions.managerQs[0],
         },
         {
             name: 'id',
             type: 'input',
-            message: questions.questions[2],
+            message: questions.managerQs[1],
         },
         {
             name: 'email',
             type: 'input',
-            message: questions.questions[3],
+            message: questions.managerQs[2],
         },
         {
             name: 'phone',
             type: 'input',
-            message: questions.questions[4],
+            message: questions.managerQs[3],
         },
         {
-            name: 'role',
+            name: 'addMore',
             type: 'checkbox',
-            message: questions.questions[1],
-            choices: questions.positions
+            message: questions.managerQs[4],
+            choices: questions.whatNext
         }
-
     ])
+        .then((data) => {
+            var manager = new Manager(data.name, data.id, data.email, data.phone)
+            console.log("OK, but first, this is you...");
+            console.log(manager);
 
-    .then((data) => {
+            if (data.addMore.toString() === questions.whatNext[0]) {
+                addEngineer();
+            }
 
-        console.log(data.name, data.id, data.email, data.phone, data.role.toString());
-        if (data.role.toString() === questions.positions[0]) {
-            var manager1 = new Manager(data.name, data.id, data.email, data.phone, data.role.toString())
-            console.log(manager1, manager1.getRole());
-        }
-        else {
-            console.log("engineer or intern or exit program"); //test code
-        }
-    });
-        // inquirer.prompt([
-        //     {
-        //         name: 'task',
-        //         type: 'checkbox',
-        //         message: questions[4],
-        //         choices: ["Add an engineer", "Add an Intern", "Exit the program"]
-        //     }
+            else (data.addmore.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team"); //will replace this log with generateHTML() after generateHTML() is written.
+        })
+}
 
-        // ])
-    //         .then((data) => {
-    //             if (data.task[0] === "Add an engineer") {
-    //                 console.log("add an engineer")
-    //                 inquirer.prompt([
-    //                     {
-    //                         name: 'name',
-    //                         type: 'input',
-    //                         message: questions[5],
-    //                     },
-    //                     {
-    //                         name: 'id',
-    //                         type: 'input',
-    //                         message: questions[6],
-    //                     },
-    //                     {
-    //                         name: 'email',
-    //                         type: 'input',
-    //                         message: questions[7],
-    //                     },
-    //                     {
-    //                         name: 'gitHub',
-    //                         type: 'input',
-    //                         message: questions[8],
-    //                     }
-    //                 ])
-    //                     .then((data) => {
-    //                         var engineer1 = new Engineer(data.name, data.id, data.email, data.gitHub)
-    //                         console.log(engineer1)
-    //                     })
-    //             }
-    //             else if (data.task[0] === "Add an Intern") {
-    //                 console.log("eventually will be directed to go to add an intern prompts")
-
-    //             }
-
-    //             else {
-    //                 console.log("eventually will trigger set-up to print html")
-    //             }
-
-    //         })
-    // })
+function addEngineer() {
+    inquirer
+        .prompt([
+            {
+                name: 'name',
+                type: 'input',
+                message: questions.engineerQs[0],
+            },
+            {
+                name: 'id',
+                type: 'input',
+                message: questions.engineerQs[1],
+            },
+            {
+                name: 'email',
+                type: 'input',
+                message: questions.engineerQs[2],
+            },
+            {
+                name: 'gitHub',
+                type: 'input',
+                message: questions.engineerQs[3],
+            }
 
 
+        ])
+
+        .then((data) => {
+
+            var engineer = new Engineer(data.name, data.id, data.email, data.gitHub)
+            console.log("OK, this is your new engineer...");
+            console.log(engineer);
+        })
+};
+
+function addIntern() {
+    inquirer
+        .prompt([
+            {
+                name: 'name',
+                type: 'input',
+                message: questions.internQs[0],
+            },
+            {
+                name: 'id',
+                type: 'input',
+                message: questions.internQs[1],
+            },
+            {
+                name: 'email',
+                type: 'input',
+                message: questions.internQs[2],
+            },
+            {
+                name: 'school',
+                type: 'input',
+                message: questions.internQs[3],
+            }
+
+
+        ])
+
+        .then((data) => {
+            var intern = new Intern(data.name, data.id, data.email, data.gitHub)
+            console.log("OK, this is your new intern...");
+            console.log(intern);
+        })
+};
