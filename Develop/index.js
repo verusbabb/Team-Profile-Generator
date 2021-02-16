@@ -7,23 +7,7 @@ const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer');
 const Intern = require('../lib/intern');
 const questions = require('../src/questions.js');
-// const Inputs = require('../src/inputs');
 
-// const questions = [
-//     '0. What is your name?',
-//     '1. What is your employer ID #?',
-//     '2. What is your email?',
-//     '3. What is your phone number?',
-//     '4. What would you like to do?',
-//     '5. What is your engineers name?',
-//     '6. What is your engineers employee id?',
-//     '7. What is your engineers email?',
-//     '8. What is your engineers username?',
-//     '9. What is your interns name?',
-//     '10. What is your interns employee id?',
-//     '11. what is your interns email?',
-//     '12. What school is your intern attending?'
-// ]
 
 inquirer
     .prompt([
@@ -64,7 +48,7 @@ inquirer
             console.log(manager1, manager1.getRole());
         }
         else {
-            console.log("engineer or intern");
+            console.log("engineer or intern or exit program"); //test code
         }
     });
         // inquirer.prompt([
