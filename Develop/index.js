@@ -1,8 +1,8 @@
 //Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateHTML = require('./generateHTML');
-const Employee = require('../lib/employee');
+const generateHTML = require('./generateHTML');
+// const Employee = require('../lib/employee');
 const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer');
 const Intern = require('../lib/intern');
@@ -41,6 +41,7 @@ function addManager() {
     ])
         .then((data) => {
             var manager = new Manager(data.name, data.id, data.email, data.phone)
+
             console.log("OK, but first, this is you...");
             console.log(manager);
 
