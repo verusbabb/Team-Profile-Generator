@@ -1,12 +1,14 @@
 //Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateHTML = require('./generateHTML');
+const util = require('util');
+// const generateHTML = require('../dist/generateHTML');
 // const Employee = require('../lib/employee');
 const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer');
 const Intern = require('../lib/intern');
 const questions = require('../src/questions.js');
+const writeFileAsync = util.promisify(fs.writeFile);
 const myTeam = [];
 
 addManager();
@@ -25,8 +27,17 @@ function continueBuilding() {
                 addEngineer();
             }
 
-            else (data.continue.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team", myTeam);
-        })
+            else if (data.continue.toString() === questions.whatNext[1]) {
+                addIntern();
+            }
+
+            else {
+                console.log("Done building Team");
+                console.log(myTeam);
+                // var htmlContent = generateHTML(myTeam)
+                // writeToFile(htmlContent);
+            }
+        });
 }
 
 function addManager() {
@@ -131,3 +142,31 @@ function addIntern() {
             continueBuilding();
         })
 };
+
+// function generateHTML(data) {
+//     // console.log(myTeam, myTeam.name);
+//     `<!DOCTYPE html>
+//     <html lang="en">
+//     <head>
+//       <meta charset="UTF-8">
+//       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+//       <title>Document</title>
+//     </head>
+//     <body>
+//       <div class="jumbotron jumbotron-fluid">
+//       <div class="container">
+//         <h1 class="display-4">Hi! My name is Steve</h1>
+
+
+//       </div>
+//     </div>
+//     </body>
+//     </html>`
+// }
+
+// function writeToFile(data) {
+//     fs.writeFile('./index.html', data, (err) =>
+//         err ? console.log(err) : console.log('Successfully generated html'));
+// }
+
