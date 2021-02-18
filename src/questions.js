@@ -24,6 +24,8 @@ const internQs = [
 
 
 
-const whatNext = ["Yes, add an engineer", "Yes, add an intern", "No, done building my team"];
+const whatNext = ["Yes, add an engineer", "Yes, add an intern", "No, I'm done building my team"];
+
+
 
 module.exports = { managerQs, engineerQs, internQs, whatNext }

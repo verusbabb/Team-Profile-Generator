@@ -1,7 +1,7 @@
 //Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('./generateHTML');
+// const generateHTML = require('./generateHTML');
 // const Employee = require('../lib/employee');
 const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer');
@@ -9,6 +9,24 @@ const Intern = require('../lib/intern');
 const questions = require('../src/questions.js');
 
 addManager();
+
+function continueBuilding() {
+    inquirer.prompt([
+        {
+            name: 'continue',
+            type: 'checkbox',
+            message: questions.managerQs[4],
+            choices: questions.whatNext
+        }
+    ])
+        .then((data) => {
+            if (data.continue.toString() === questions.whatNext[0]) {
+                addEngineer();
+            }
+
+            else (data.continue.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team");
+        })
+}
 
 function addManager() {
     inquirer.prompt([
@@ -32,24 +50,14 @@ function addManager() {
             type: 'input',
             message: questions.managerQs[3],
         },
-        {
-            name: 'addMore',
-            type: 'checkbox',
-            message: questions.managerQs[4],
-            choices: questions.whatNext
-        }
     ])
         .then((data) => {
             var manager = new Manager(data.name, data.id, data.email, data.phone)
 
-            console.log("OK, but first, this is you...");
+            console.log("This is you...");
             console.log(manager);
 
-            if (data.addMore.toString() === questions.whatNext[0]) {
-                addEngineer();
-            }
-
-            else (data.addMore.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team"); //will replace this log with generateHTML() after generateHTML() is written.
+            continueBuilding();
         })
 }
 
@@ -76,15 +84,14 @@ function addEngineer() {
                 type: 'input',
                 message: questions.engineerQs[3],
             }
-
-
         ])
 
         .then((data) => {
 
             var engineer = new Engineer(data.name, data.id, data.email, data.gitHub)
-            console.log("OK, this is your new engineer...");
+            console.log("OK, this is your newly added engineer...");
             console.log(engineer);
+            continueBuilding();
         })
 };
 
@@ -111,13 +118,12 @@ function addIntern() {
                 type: 'input',
                 message: questions.internQs[3],
             }
-
-
         ])
 
         .then((data) => {
             var intern = new Intern(data.name, data.id, data.email, data.school)
-            console.log("OK, this is your new intern...");
+            console.log("OK, this is your newly added intern...");
             console.log(intern);
+            continueBuilding();
         })
 };
