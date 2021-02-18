@@ -7,6 +7,7 @@ const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer');
 const Intern = require('../lib/intern');
 const questions = require('../src/questions.js');
+const myTeam = [];
 
 addManager();
 
@@ -24,7 +25,7 @@ function continueBuilding() {
                 addEngineer();
             }
 
-            else (data.continue.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team");
+            else (data.continue.toString() === questions.whatNext[1]) ? addIntern() : console.log("done building team", myTeam);
         })
 }
 
@@ -56,6 +57,7 @@ function addManager() {
 
             console.log("This is you...");
             console.log(manager);
+            myTeam.push(manager);
 
             continueBuilding();
         })
@@ -91,6 +93,7 @@ function addEngineer() {
             var engineer = new Engineer(data.name, data.id, data.email, data.gitHub)
             console.log("OK, this is your newly added engineer...");
             console.log(engineer);
+            myTeam.push(engineer);
             continueBuilding();
         })
 };
@@ -124,6 +127,7 @@ function addIntern() {
             var intern = new Intern(data.name, data.id, data.email, data.school)
             console.log("OK, this is your newly added intern...");
             console.log(intern);
+            myTeam.push(intern);
             continueBuilding();
         })
 };
