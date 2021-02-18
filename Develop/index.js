@@ -1,7 +1,7 @@
 //Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateHTML = require('../dist/generateHTML');
+const generateHTML = require('../lib/generateHTML');
 // const Employee = require('../lib/employee');
 const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer');
@@ -33,8 +33,9 @@ function continueBuilding() {
             else {
                 console.log("Done building Team");
                 console.log(myTeam);
-                // var htmlContent = generateHTML(myTeam)
-                // writeToFile(htmlContent);
+                var htmlContent = generateHTML(myTeam)
+                console.log(htmlContent);
+                writeToFile(htmlContent);
             }
         });
 }
@@ -142,30 +143,8 @@ function addIntern() {
         })
 };
 
-// function generateHTML(data) {
-//     // console.log(myTeam, myTeam.name);
-//     `<!DOCTYPE html>
-//     <html lang="en">
-//     <head>
-//       <meta charset="UTF-8">
-//       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-//       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-//       <title>Document</title>
-//     </head>
-//     <body>
-//       <div class="jumbotron jumbotron-fluid">
-//       <div class="container">
-//         <h1 class="display-4">Hi! My name is Steve</h1>
-
-
-//       </div>
-//     </div>
-//     </body>
-//     </html>`
-// }
-
-// function writeToFile(data) {
-//     fs.writeFile('./index.html', data, (err) =>
-//         err ? console.log(err) : console.log('Successfully generated html'));
-// }
+function writeToFile(data) {
+    fs.writeFile('./index.html', data, (err) =>
+        err ? console.log(err) : console.log('Successfully generated html'));
+}
 
