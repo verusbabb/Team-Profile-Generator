@@ -22,10 +22,10 @@ describe("Engineer", () => {
 
             const worker = new Engineer(person.name, person.id, person.email, person.gitHub);
 
-            expect(worker.name).toEqual("steve");
-            expect(worker.id).toEqual(123);
-            expect(worker.email).toEqual("steve.babb@outlook.com");
-            expect(worker.gitHub).toEqual("verusbabb");
+            expect(worker.name).toEqual(person.name);
+            expect(worker.id).toEqual(person.id);
+            expect(worker.email).toEqual(person.email);
+            expect(worker.gitHub).toEqual(person.gitHub);
         })
     })
 
@@ -42,7 +42,7 @@ describe("Engineer", () => {
 
             // console.log(username instanceof Engineer);
 
-            expect(result).toEqual("verusbabb");
+            expect(result).toEqual(person.gitHub);
         })
     })
 
@@ -60,7 +60,7 @@ describe("Engineer", () => {
 
             // console.log(username instanceof Engineer);
 
-            expect(result).toEqual("Engineer");
+            expect(result).toEqual(person.role);
         })
     })
 })
