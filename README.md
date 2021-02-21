@@ -13,7 +13,7 @@ about all team members.
 - [Questions](#questions)
 
 ## *Description*
-This applicatio was developed using Node, Javascript, HTML, and CSS.  Dependencies include fs, inquirer, and 
+This application was developed using Node, Javascript, HTML, and CSS.  Dependencies include fs, inquirer, and 
 jest (jest is for testing purposes only; not required to run the application).
 
 ## *Installation*
@@ -30,13 +30,18 @@ Step 2: From the integrated terminal, start the application with the following c
 node index.js
 ```
 
-## *Screenshots*
-![Screenshot of DevTeam Mock Profile](./screenshots/ss1.png)
-Responsive Flex Breakpoint            |  Queried Flex-Direction Switch
-:-------------------------:|:-------------------------:
-![Screenshot of DevTeam Mock Profile](./screenshots/ss3.png)  |  ![Screenshot of DevTeam Mock Profile](./screenshots/ss4.png)
+Step 3 (optional): To run tests and validate that the app is running as expected, open the integrated terminal and enter the following command:
+```
+npm run test
+```
 
-![Screenshot of DevTeam Command Line Prompt Questions](./screenshots/ss2.png)
+## *Screenshots*
+![Screenshot of Node Input Experience](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/output.png)
+
+:-------------------------:|:-------------------------:
+![Screenshot of HTML Output](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/terminal.png)
+
+
 
 ## *Contributing*
 This project is open source so feel free to take it and run with it.
