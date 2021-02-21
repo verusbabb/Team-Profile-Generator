@@ -7,6 +7,7 @@ about all team members.
 - [Description](#description)
 - [Installation](#installation)
 - [Screenshots](#screenshots)
+- [Video Demonstration](#Video-Demonstration)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Contact Developer](#Contact-Developer)
@@ -44,6 +45,10 @@ Sample output from the same user data input:
 
 ![Screenshot of Node Input Experience](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/output.png)
 
+
+## *Video Demonstration*
+
+Placeholder
 
 ## *Contributing*
 This is an open source project.  Please email me to contribute or submit push requests.
