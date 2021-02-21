@@ -36,18 +36,23 @@ npm run test
 ```
 
 ## *Screenshots*
-![Screenshot of Node Input Experience](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/output.png)
 
-:-------------------------:|:-------------------------:
+An example of the user experience with data input at the command line:
+
 ![Screenshot of HTML Output](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/terminal.png)
 
+Sample output from the same user data input:
+
+![Screenshot of Node Input Experience](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/output.png)
 
 
 ## *Contributing*
-This project is open source so feel free to take it and run with it.
+This is an open source project.  Please email me to contribute or submit push requests.
 
 ## *Tests*
-tests
+Seventeen(17) tests were run on this application in the test environment:
+
+![Screenshot of test results]
 
 ## *Questions?*
 - My Profile: [katsign](https://github.com/katsign)
