@@ -36,12 +36,12 @@ npm run test
 ```
 
 ## *Screenshots*
-![Screenshot of DevTeam Mock Profile](./screenshots/ss1.png)
+![Screenshot of Node Input Experience](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/output.png)
 Responsive Flex Breakpoint            |  Queried Flex-Direction Switch
 :-------------------------:|:-------------------------:
-![Screenshot of DevTeam Mock Profile](./screenshots/ss3.png)  |  ![Screenshot of DevTeam Mock Profile](./screenshots/ss4.png)
+![Screenshot of HTML Output](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/terminal.png)
 
-![Screenshot of DevTeam Command Line Prompt Questions](./screenshots/ss2.png)
+
 
 ## *Contributing*
 This project is open source so feel free to take it and run with it.
