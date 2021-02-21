@@ -37,7 +37,7 @@ npm run test
 
 ## *Screenshots*
 ![Screenshot of Node Input Experience](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/output.png)
-Responsive Flex Breakpoint            |  Queried Flex-Direction Switch
+
 :-------------------------:|:-------------------------:
 ![Screenshot of HTML Output](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/terminal.png)
 
