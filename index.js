@@ -1,12 +1,12 @@
 //Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('../lib/generateHTML');
-// const Employee = require('../lib/employee');
-const Manager = require('../lib/manager');
-const Engineer = require('../lib/engineer');
-const Intern = require('../lib/intern');
-const questions = require('../src/questions.js');
+const generateHTML = require('./lib/generateHTML');
+const Employee = require('./lib/employee');
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
+const questions = require('./src/questions.js');
 
 const myTeam = [];
 
