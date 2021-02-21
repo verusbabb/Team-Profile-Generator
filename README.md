@@ -52,10 +52,9 @@ This is an open source project.  Please email me to contribute or submit push re
 ## *Tests*
 Seventeen(17) tests were run on this application in the test environment:
 
-![Screenshot of test results]
+![Screenshot of test results](https://github.com/verusbabb/Team-Profile-Generator/blob/main/screenshots/tests.png)
 
-## *Questions?*
-- My Profile: [katsign](https://github.com/katsign)
+## *Contact Developer*
+- Email: steve.babb@outlook.com
+- GitHub: github.com/verusbabb
 
----
-This project is MIT licensed. &copy; 2021
