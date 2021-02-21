@@ -9,7 +9,7 @@ about all team members.
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [Contact Developer](#Contact_Developer)
+- [Contact Developer](#Contact-Developer)
 
 ## *Description*
 This application was developed using Node, Javascript, HTML, and CSS.  Dependencies include fs, inquirer, and 
