@@ -55,5 +55,5 @@ Seventeen(17) tests were run on this application in the test environment:
 
 ## *Contact Developer*
 - Email: steve.babb@outlook.com
-- GitHub: github.com/verusbabb
+- GitHub: https://github.com/verusbabb
 
