@@ -6,11 +6,10 @@ about all team members.
 
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [Questions](#questions)
+- [Contact Developer](#Contact Developer)
 
 ## *Description*
 This application was developed using Node, Javascript, HTML, and CSS.  Dependencies include fs, inquirer, and 
