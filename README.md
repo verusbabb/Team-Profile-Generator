@@ -13,7 +13,7 @@ about all team members.
 - [Questions](#questions)
 
 ## *Description*
-This applicatio was developed using Node, Javascript, HTML, and CSS.  Dependencies include fs, inquirer, and 
+This application was developed using Node, Javascript, HTML, and CSS.  Dependencies include fs, inquirer, and 
 jest (jest is for testing purposes only; not required to run the application).
 
 ## *Installation*
@@ -28,6 +28,11 @@ npm i
 Step 2: From the integrated terminal, start the application with the following command:
 ```
 node index.js
+```
+
+Step 3 (optional): To run tests and validate that the app is running as expected, open the integrated terminal and enter the following command:
+```
+npm run test
 ```
 
 ## *Screenshots*
