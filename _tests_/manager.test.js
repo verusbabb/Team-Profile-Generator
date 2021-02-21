@@ -38,7 +38,7 @@ describe("Manager", () => {
                 phone: "303-674-2950",
                 role: "Manager"
             };
-            const worker = new Manager(person.name, person.id, person.email, person.getRole);
+            const worker = new Manager(person.name, person.id, person.email, person.role);
             const result = worker.getRole();
 
             expect(result).toEqual(person.role);
