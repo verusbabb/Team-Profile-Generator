@@ -10,8 +10,10 @@ const questions = require('./src/questions.js');
 
 const myTeam = [];
 
+//Invoke function that gathers info on team manager
 addManager();
 
+//function that determine whether manager wants to add more employees to team
 function continueBuilding() {
     inquirer.prompt([
         {
@@ -40,6 +42,7 @@ function continueBuilding() {
         });
 }
 
+//function that collects information about manager
 function addManager() {
     inquirer.prompt([
         {
@@ -74,6 +77,7 @@ function addManager() {
         })
 }
 
+//function that collects information about engineers
 function addEngineer() {
     inquirer
         .prompt([
@@ -109,6 +113,7 @@ function addEngineer() {
         })
 };
 
+//function that collects information about interns
 function addIntern() {
     inquirer
         .prompt([
@@ -143,6 +148,7 @@ function addIntern() {
         })
 };
 
+//function that writes file to html/produces output
 function writeToFile(data) {
     fs.writeFile('./index.html', data, (err) =>
         err ? console.log(err) : console.log('Successfully generated html'));
