@@ -47,8 +47,9 @@ Sample output from the same user data input:
 
 
 ## *Video Demonstration*
+Please review video of installation, usage, and testing:
 
-Placeholder
+https://drive.google.com/file/d/1yPMOpRFW5i-0SnVutmKETh5cyND-t9Y4/view?usp=sharing
 
 ## *Contributing*
 This is an open source project.  Please email me to contribute or submit push requests.
